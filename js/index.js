@@ -27,6 +27,7 @@ setTimeout(function(){
 const buttonsBot = document.querySelector('.btn')
 // 5th - counts how many times button was clicked
 buttonsBot.addEventListener('click', event => {
+    // eslint-disable-next-line no-const-assign
     buttonsBot = `Click count: ${event.detail}`
 });
 
@@ -60,7 +61,7 @@ window.addEventListener('resize', reportWindowSize);
 
 
 // 10th - will show in log when leaving or starting fullscreen mode
-document.addEventListener('fullscreenchange', (event) => {
+document.addEventListener('fullscreenchange', () => {
     if (document.fullscreenElement) {
       console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
     } else {

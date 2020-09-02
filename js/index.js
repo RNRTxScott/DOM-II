@@ -31,17 +31,17 @@ buttonsBot.addEventListener('click', event => {
 });
 
 const mapPic = document.querySelector('.content-section .img-content')
-// 6th
+// 6th - creates border on dbl click 
 mapPic.addEventListener('dblclick', () => {
     mapPic.style.border = '2px solid blue';
 });
 
 const introNav = document.querySelector('a')
-// 7th
+// 7th - changes bckgrnd color
 introNav.addEventListener('focusin',() => {
     introNav.style.background = 'lightblue';
 });
-// 8th
+// 8th - changes color back to normal
 introNav.addEventListener('focusout',() => {
     introNav.style.background = '';
 });
@@ -55,11 +55,11 @@ function reportWindowSize() {
 }
 
 window.onresize = reportWindowSize;
-// 9th
+// 9th - logs how many times the screen is resized
 window.addEventListener('resize', reportWindowSize);
 
 
-// 10th
+// 10th - will show in log when leaving or starting fullscreen mode
 document.addEventListener('fullscreenchange', (event) => {
     if (document.fullscreenElement) {
       console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);

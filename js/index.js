@@ -29,3 +29,19 @@ const buttonsBot = document.querySelector('.btn')
 buttonsBot.addEventListener('click', event => {
     buttonsBot = `Click count: ${event.detail}`
 });
+
+const mapPic = document.querySelector('.content-section .img-content')
+// 6th
+mapPic.addEventListener('dblclick', () => {
+    mapPic.style.border = '2px solid blue';
+});
+
+const introNav = document.querySelector('a')
+// 7th
+introNav.addEventListener('focusin',() => {
+    introNav.style.background = 'lightblue';
+});
+// 8th
+introNav.addEventListener('focusout',() => {
+    introNav.style.background = '';
+});
